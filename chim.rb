@@ -7,7 +7,7 @@ class Chim < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://chim.sh/releases/v0.1.0-beta.1/chim-v0.1.0-beta.1-macos-x64.tar.xz"
-      sha256 "d7b624e5e4a82a4010efb63321f3ebd6f9550ba45a686f220c01c6c3ddf79825"
+      sha256 "54b9bfb596be161189fc9c3138d62e306742a1ab24e2977660d66e8f6e1a4eaa"
 
       def install
         bin.install "bin/chim"
@@ -15,7 +15,7 @@ class Chim < Formula
     end
     if Hardware::CPU.arm?
       url "https://chim.sh/releases/v0.1.0-beta.1/chim-v0.1.0-beta.1-macos-arm64.tar.xz"
-      sha256 "f3a0c6599bceaaf7a2f0d466c6530cff9ec844998f10e24da5058615a49657dc"
+      sha256 "0920a9bf0f377dc22448c2b9d675f18b7f445af44eb21879fca4506685842d67"
 
       def install
         bin.install "bin/chim"
@@ -26,7 +26,7 @@ class Chim < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://chim.sh/releases/v0.1.0-beta.1/chim-v0.1.0-beta.1-linux-arm64.tar.xz"
-      sha256 "d872605cc4f258f71924e3553994b4e81084cf89093c653100a30cc738afeee1"
+      sha256 "d58b34a56d91f44638128f01d078d71bbf94c95dbce419985e7d7f796e03568b"
 
       def install
         bin.install "bin/chim"
@@ -34,7 +34,7 @@ class Chim < Formula
     end
     if Hardware::CPU.intel?
       url "https://chim.sh/releases/v0.1.0-beta.1/chim-v0.1.0-beta.1-linux-x64.tar.xz"
-      sha256 "b4bc464a8ee44f1a497d2f452fdb1c18794fb46b7f4f7e3431dca4002c169e43"
+      sha256 "9a5a07afda5dae2b748750b957eecced47a9308b22aa93669fbfb09e44dd4e59"
 
       def install
         bin.install "bin/chim"
