@@ -1,7 +1,7 @@
 # homebrew-brew
 
-Install [`chim`](https://chim.pw) with:
+Install [`chim`](https://chim.sh) with:
 
 ```
-brew install chimpw/tap/chim
+brew install jdxcode/tap/chim
 ```
