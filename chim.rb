@@ -2,20 +2,20 @@ class Chim < Formula
   desc "Cross-platform binary fetcher/runner"
   homepage "https://chim.sh"
   license "MIT"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://chim.sh/releases/v1.1.1/chim-v1.1.1-macos-x64.tar.xz"
-      sha256 "91a1c401fd9ba270813e1328fcdaafb930001d871cd99ae1e0e14c6cc72c352e"
+      url "https://chim.sh/releases/v1.1.2/chim-v1.1.2-macos-x64.tar.xz"
+      sha256 "5af8e65494a2305448d11f7f6c4f5a230099b75ddd26bb1c1d178e0b353b3350"
 
       def install
         bin.install "bin/chim"
       end
     end
     if Hardware::CPU.arm?
-      url "https://chim.sh/releases/v1.1.1/chim-v1.1.1-macos-arm64.tar.xz"
-      sha256 "cc8a3adb7a86082d32137153af37f8bf5feb7ce955c94cce93eb90909702f6a3"
+      url "https://chim.sh/releases/v1.1.2/chim-v1.1.2-macos-arm64.tar.xz"
+      sha256 "02fe28118982a5af2414092fb9494d1f5bd3e22276c60917bb9efe6ed3b1edca"
 
       def install
         bin.install "bin/chim"
@@ -25,16 +25,16 @@ class Chim < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://chim.sh/releases/v1.1.1/chim-v1.1.1-linux-arm64.tar.xz"
-      sha256 "a16accf826fab8c89ddf2371c2605fbd725b08a954e9cc1543c111a4fdea82fc"
+      url "https://chim.sh/releases/v1.1.2/chim-v1.1.2-linux-arm64.tar.xz"
+      sha256 "e0c83081407b8e659f8c9dee9a7d238025c84ca38601676b7360c106958862f8"
 
       def install
         bin.install "bin/chim"
       end
     end
     if Hardware::CPU.intel?
-      url "https://chim.sh/releases/v1.1.1/chim-v1.1.1-linux-x64.tar.xz"
-      sha256 "3ba72397060daa4b117f3e9d5978bbf1d10c4c5a06a431184794dc8bc9b57fd6"
+      url "https://chim.sh/releases/v1.1.2/chim-v1.1.2-linux-x64.tar.xz"
+      sha256 "dde02ed932e36dfa874cbf6bb1029a72395881434fdffe251ade6562f178f3fa"
 
       def install
         bin.install "bin/chim"
