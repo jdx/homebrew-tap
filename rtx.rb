@@ -2,20 +2,20 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "0.1.1-alpha.37"
+  version "0.1.1-alpha.38"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.37/rtx-v0.1.1-alpha.37-macos-x64.tar.xz"
-      sha256 "6a0706836be940ea5a051e5f7632493d2d5d393bfb06be51c0b3d2b9fe653dc7"
+      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.38/rtx-v0.1.1-alpha.38-macos-x64.tar.xz"
+      sha256 "5b1f8d0b06834f4300a829c7832720f9ace15139c6ec052dda6c4ada58ce7166"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.37/rtx-v0.1.1-alpha.37-macos-arm64.tar.xz"
-      sha256 "a258e260a5fc191f5ddbfa375f42772818a8166fc1896396484b771c87a1381b"
+      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.38/rtx-v0.1.1-alpha.38-macos-arm64.tar.xz"
+      sha256 "bdea0bd3b12d0b47572623337d98182f79db613a680960707b4ff81e1fedfb89"
 
       def install
         bin.install "bin/rtx"
@@ -25,16 +25,16 @@ class Rtx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.37/rtx-v0.1.1-alpha.37-linux-arm64.tar.xz"
-      sha256 "dfbb3086ad28544761a992ec19d8cb3004964084fc5b7e9dfc4c8209ae3cd994"
+      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.38/rtx-v0.1.1-alpha.38-linux-arm64.tar.xz"
+      sha256 "e68de9a81a64f3916da13428dbfb82ffbf9e65a0fce40ca2cb3e62fb6b611320"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.37/rtx-v0.1.1-alpha.37-linux-x64.tar.xz"
-      sha256 "e5758924ea4ac0631539d4101dd277ecd8acfcb290a6e7fe206095420087a6b1"
+      url "https://github.com/jdxcode/rtx/releases/download/v0.1.1-alpha.38/rtx-v0.1.1-alpha.38-linux-x64.tar.xz"
+      sha256 "ffc841cf08c9089440e27e58f877acd9ff53eda0d321ca6026ab878ebb50ef39"
 
       def install
         bin.install "bin/rtx"
