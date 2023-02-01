@@ -2,20 +2,20 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "1.2.9"
+  version "1.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.2.9/rtx-v1.2.9-macos-x64.tar.xz"
-      sha256 "788d38faf29ba4c995f2e92771f6a6676f5e172337a13a7e4300d9dfde330241"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.3.0/rtx-v1.3.0-macos-x64.tar.xz"
+      sha256 "777417e6bb1e0b6d245c8f9d3d20fa2794cceda54b5edd01d5b5fc90a6c914af"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.2.9/rtx-v1.2.9-macos-arm64.tar.xz"
-      sha256 "a925be97442df06a4c86aad6a78a16133fd001a64db7ded08665127ca15b3078"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.3.0/rtx-v1.3.0-macos-arm64.tar.xz"
+      sha256 "750559937f5ac01edd5b2dc568a99188c5e0e75439a8ca31880b4958ca316e4b"
 
       def install
         bin.install "bin/rtx"
@@ -25,16 +25,16 @@ class Rtx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.2.9/rtx-v1.2.9-linux-arm64.tar.xz"
-      sha256 "639916cedef7906a08ddbbf7f7151d2b0a0d4196063e060c89c9e7d3832a64a0"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.3.0/rtx-v1.3.0-linux-arm64.tar.xz"
+      sha256 "70fc8e8c60c22fae29d66fed8503f4cc1f67d964bd750a2760eebe74b1dd3b1f"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.2.9/rtx-v1.2.9-linux-x64.tar.xz"
-      sha256 "72b9ae0122ac9253ee4bf8b583fc1dd883c5f784e7ee0d50ebf50da31c81d436"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.3.0/rtx-v1.3.0-linux-x64.tar.xz"
+      sha256 "45217e547f7ec3b2b653a00b17faa367287a8340e3cecd8de9b16c9e191fe887"
 
       def install
         bin.install "bin/rtx"
