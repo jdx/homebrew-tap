@@ -43,7 +43,7 @@ class Rtx < Formula
   end
 
   test do
-    system "#{bin}/rtx --version"
-    assert_match "it works!", shell_output("#{bin}/rtx exec nodejs@18 -- node -p 'it works!'")
+    system "#{bin}/rtx", "install", "nodejs@18.13.0"
+    assert_match "v18.13.0", shell_output("#{bin}/rtx exec nodejs@18.13.0 -- node -v")
   end
 end
