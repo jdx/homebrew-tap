@@ -2,20 +2,20 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "1.15.4"
+  version "1.16.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.4/rtx-brew-v1.15.4-macos-x64.tar.xz"
-      sha256 "62099a6a6531795299361a161c50098d48d9b0dcb0ffb8ed97e7b2907458d847"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.16.0/rtx-brew-v1.16.0-macos-x64.tar.xz"
+      sha256 "fcf36034c46a1d4f15657814aa51cdfc2a7ff60fe3c41f12be66af695db428de"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.4/rtx-brew-v1.15.4-macos-arm64.tar.xz"
-      sha256 "a598e778bbabb399f296c0e35c04590e53e2f1783f30a2135a044a8518d38fd6"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.16.0/rtx-brew-v1.16.0-macos-arm64.tar.xz"
+      sha256 "dcc73f98b728382b7e8f728762d57165cd2d1187cf658e3a80d8b9d983b81324"
 
       def install
         bin.install "bin/rtx"
@@ -25,16 +25,16 @@ class Rtx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.4/rtx-brew-v1.15.4-linux-arm64.tar.xz"
-      sha256 "1d16f5c5210ff7c4557960d0624de8f4ae0f4257ecb3868f6889a80b98dd4165"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.16.0/rtx-brew-v1.16.0-linux-arm64.tar.xz"
+      sha256 "bb810700132864627a028fda6aab68fdb93a4e2ccf3491b2a15e596fae21ccb3"
 
       def install
         bin.install "bin/rtx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.4/rtx-brew-v1.15.4-linux-x64.tar.xz"
-      sha256 "e26275acc86f1a9fbca944baf8c612e348472117838072f3f3f858a30cb2418e"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.16.0/rtx-brew-v1.16.0-linux-x64.tar.xz"
+      sha256 "e0be7ea23d75547163b7856a63bf5e126c1a835e8ad397648a2042d96d5122d2"
 
       def install
         bin.install "bin/rtx"
@@ -43,7 +43,7 @@ class Rtx < Formula
   end
 
   test do
-    system "#{bin}/rtx", "install", "nodejs@18.13.0"
-    assert_match "v18.13.0", shell_output("#{bin}/rtx exec nodejs@18.13.0 -- node -v")
+    system "#{bin}/rtx --version"
+    assert_match "it works!", shell_output("#{bin}/rtx exec nodejs@18 -- node -p 'it works!'")
   end
 end
