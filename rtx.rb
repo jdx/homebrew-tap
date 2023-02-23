@@ -2,11 +2,11 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "1.15.2"
+  version "1.15.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.2/rtx-brew-v1.15.2-macos-x64.tar.xz"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.15.3/rtx-brew-v1.15.3-macos-x64.tar.xz"
       sha256 ""
 
       def install
@@ -14,7 +14,7 @@ class Rtx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.2/rtx-brew-v1.15.2-macos-arm64.tar.xz"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.15.3/rtx-brew-v1.15.3-macos-arm64.tar.xz"
       sha256 ""
 
       def install
@@ -25,7 +25,7 @@ class Rtx < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.2/rtx-brew-v1.15.2-linux-arm64.tar.xz"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.15.3/rtx-brew-v1.15.3-linux-arm64.tar.xz"
       sha256 ""
 
       def install
@@ -33,7 +33,7 @@ class Rtx < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jdxcode/rtx/releases/download/v1.15.2/rtx-brew-v1.15.2-linux-x64.tar.xz"
+      url "https://github.com/jdxcode/rtx/releases/download/v1.15.3/rtx-brew-v1.15.3-linux-x64.tar.xz"
       sha256 ""
 
       def install
