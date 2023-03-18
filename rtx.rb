@@ -2,27 +2,27 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "1.25.0"
+  version "1.25.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v1.25.0/rtx-brew-v1.25.0-macos-x64.tar.xz"
-      sha256 "f2c93eb536830e6e0a4c9119663e950e86693f8c72cb0be29741c1aa7bfdd254"
+      url "https://rtx.pub/v1.25.3/rtx-brew-v1.25.3-macos-x64.tar.xz"
+      sha256 "e686792437c6db5f24bb71271480fd429cb785e5be8778ecb1931103ddd8c872"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.pub/v1.25.0/rtx-brew-v1.25.0-macos-arm64.tar.xz"
-      sha256 "128d73b208d148b08072e182f0010e829662da62474ade42ce1f1d59be56b9b8"
+      url "https://rtx.pub/v1.25.3/rtx-brew-v1.25.3-macos-arm64.tar.xz"
+      sha256 "c1a984b4aad43c02170673b0fca8ef327d19e0f1b9eea9463ff870ffe5ffd2e5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.pub/v1.25.0/rtx-brew-v1.25.0-linux-arm64.tar.xz"
-      sha256 "bcb4ea97b4a070b83e37e7542a4eea627ae509875d58332d68e5a6d3c3466246"
+      url "https://rtx.pub/v1.25.3/rtx-brew-v1.25.3-linux-arm64.tar.xz"
+      sha256 "7becf4350b46d18fea99e722464fc5e145a4d56b0b3e1c05af6f5b38fcd06a6d"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v1.25.0/rtx-brew-v1.25.0-linux-x64.tar.xz"
-      sha256 "057f7b2cdaa7ab778a792f79c970445202719b8489b8742629375869cbfc25b3"
+      url "https://rtx.pub/v1.25.3/rtx-brew-v1.25.3-linux-x64.tar.xz"
+      sha256 "43e4ed89e8ed07bf94017356b7fb0e0829a898dc4175ccfb6042da20022d1213"
     end
   end
 
