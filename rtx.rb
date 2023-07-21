@@ -32,6 +32,14 @@ class Rtx < Formula
     generate_completions_from_executable(bin/"rtx", "completion")
   end
 
+  def caveats
+    <<~EOS
+      To activate rtx, add this to your shell profile (e.g.: ~/.bashrc or ~/.zshrc):
+          eval "$(rtx activate [SHELL])"
+      Replace [SHELL] with your shell (bash, zsh, fish, etc.)
+    EOS
+  end
+
   test do
     system "#{bin}/rtx --version"
     system "#{bin}/rtx", "install", "node@20.0.0"
