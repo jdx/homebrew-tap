@@ -2,27 +2,27 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdxcode/rtx"
   license "MIT"
-  version "1.34.1"
+  version "1.34.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v1.34.1/rtx-brew-v1.34.1-macos-x64.tar.xz"
-      sha256 "92d8991d5c81e4c83fb65030fb26b708dbdd582bbf9d24f72f95a38f688da51a"
+      url "https://rtx.pub/v1.34.2/rtx-brew-v1.34.2-macos-x64.tar.xz"
+      sha256 "fc7c5ce9b1b887963fbf635893fc7f629db5d3ccaca844e5709dcec4276162fa"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.pub/v1.34.1/rtx-brew-v1.34.1-macos-arm64.tar.xz"
-      sha256 "4c99a5b9cbf717c575be706fbed80178ea44793537f88d6903eb0c5eab916dc9"
+      url "https://rtx.pub/v1.34.2/rtx-brew-v1.34.2-macos-arm64.tar.xz"
+      sha256 "3636ed85102c1703b8e92e56e5527957c3d6359dfe49387c88a72a9f4c5c920c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.pub/v1.34.1/rtx-brew-v1.34.1-linux-arm64.tar.xz"
-      sha256 "ea1faaa42652825e6ce77bcaef7a7fbdcbacf2f8e86de1cf9f9d52d81cc5b102"
+      url "https://rtx.pub/v1.34.2/rtx-brew-v1.34.2-linux-arm64.tar.xz"
+      sha256 "f5e0a7a538cda116f0cd6a23948f64427e66731c3c26094a2c0294f7930d24db"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v1.34.1/rtx-brew-v1.34.1-linux-x64.tar.xz"
-      sha256 "e29128a529b2af5b65cdfcfad95aca04ab4fdeddb79ff23bd2ef130f105586f1"
+      url "https://rtx.pub/v1.34.2/rtx-brew-v1.34.2-linux-x64.tar.xz"
+      sha256 "ce538e8d9fb8037cac6831c33156de79e101029d035e7df5b90376d425dad8dc"
     end
   end
 
@@ -30,14 +30,6 @@ class Rtx < Formula
     bin.install "bin/rtx"
     man1.install "man/man1/rtx.1"
     generate_completions_from_executable(bin/"rtx", "completion")
-  end
-
-  def caveats
-    <<~EOS
-      To activate rtx, add this to your shell profile (e.g.: ~/.bashrc or ~/.zshrc):
-          eval "$(rtx activate [SHELL])"
-      Replace [SHELL] with your shell (bash, zsh, fish, etc.)
-    EOS
   end
 
   test do
