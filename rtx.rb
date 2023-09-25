@@ -2,27 +2,27 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdx/rtx"
   license "MIT"
-  version "2023.9.1"
+  version "2023.9.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v2023.9.1/rtx-nonup-v2023.9.1-macos-x64.tar.xz"
-      sha256 "4767e3edf68e4d72ca2347e86e31967f68d7e548afff14a954ba5ccb981b26e0"
+      url "https://rtx.pub/v2023.9.2/rtx-nonup-v2023.9.2-macos-x64.tar.xz"
+      sha256 "ec8f1e71e43ed5099d11ad20e740fb00208162e8cb5f30f0222eb6a30efc0416"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.pub/v2023.9.1/rtx-nonup-v2023.9.1-macos-arm64.tar.xz"
-      sha256 "2b88befd74ac9a39313964b44fb028b7bad38f4e5ac673b3efdc02306f0b21e4"
+      url "https://rtx.pub/v2023.9.2/rtx-nonup-v2023.9.2-macos-arm64.tar.xz"
+      sha256 "4368024e74bb8e15b1a26a0f90b13caefe5ef73bae396c324d586a89eec77452"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.pub/v2023.9.1/rtx-nonup-v2023.9.1-linux-arm64.tar.xz"
-      sha256 "da6745e22e4fdea4e1fd5eb692da5c1d8c06528269441d224a0a98f61bce1837"
+      url "https://rtx.pub/v2023.9.2/rtx-nonup-v2023.9.2-linux-arm64.tar.xz"
+      sha256 "77235f66160a467605f8f086deb679ee7ed78751276f2bacd41022fdfc5a1613"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v2023.9.1/rtx-nonup-v2023.9.1-linux-x64.tar.xz"
-      sha256 "cc864255293ad44055485045a702ccc208fc2dd522f7d6a8aaa14b0b14f27b0e"
+      url "https://rtx.pub/v2023.9.2/rtx-nonup-v2023.9.2-linux-x64.tar.xz"
+      sha256 "c2cb32bc9d9f71c14523d7d57d1cbb3c9fe67719ea016de46caee5d90f1e75ac"
     end
   end
 
