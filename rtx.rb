@@ -2,32 +2,33 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdx/rtx"
   license "MIT"
-  version "2023.12.5"
+  version "2023.12.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v2023.12.5/rtx-nonup-v2023.12.5-macos-x64.tar.xz"
-      sha256 "1fe4e5e8dec8e7e2a2bd4137e61b8392291652f9baeb27e0cad997272dd09649"
+      url "https://rtx.pub/v2023.12.6/rtx-v2023.12.6-macos-x64.tar.xz"
+      sha256 "fa93dfa4cc864dec25b8662cbdfe5bb2c76e8ce2968d30ca4de58731b2dd3cac"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.pub/v2023.12.5/rtx-nonup-v2023.12.5-macos-arm64.tar.xz"
-      sha256 "e31d752efb2234b4d1d7162e80117159f6fdf1b6f387d9a143e851c953b01bd5"
+      url "https://rtx.pub/v2023.12.6/rtx-v2023.12.6-macos-arm64.tar.xz"
+      sha256 "11fcf76d809cea4a9c1e93338f2984059c988d166c356f198a59eaf6b8b6e8f2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.pub/v2023.12.5/rtx-nonup-v2023.12.5-linux-arm64.tar.xz"
-      sha256 "601d84ee840c07f91da740ff7a2038ad3db10f1988335ade6282c1e5fa54456a"
+      url "https://rtx.pub/v2023.12.6/rtx-v2023.12.6-linux-arm64.tar.xz"
+      sha256 "3265cbc5d115fa7a333a307a1be04e3c72c38fba81054496eba8a0286c5e7278"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.pub/v2023.12.5/rtx-nonup-v2023.12.5-linux-x64.tar.xz"
-      sha256 "4bda64e9f8ea87b1059ef997875dfd1e3c9293f37ff80a92e23f596080f2dcc9"
+      url "https://rtx.pub/v2023.12.6/rtx-v2023.12.6-linux-x64.tar.xz"
+      sha256 "f4e7f0cbb7131289b612a6a65f507bd89ed165af71ac8417751ddef0bbf39ad6"
     end
   end
 
   def install
     bin.install "bin/rtx"
+    lib.write ".disable-self-update"
     man1.install "man/man1/rtx.1"
     generate_completions_from_executable(bin/"rtx", "completion")
   end
