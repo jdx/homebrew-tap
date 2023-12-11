@@ -4,33 +4,34 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdx/rtx"
   license "MIT"
-  version "2023.12.22"
+  version "2023.12.23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.jdx.dev/v2023.12.22/rtx-v2023.12.22-macos-x64.tar.xz"
-      sha256 "68d45a3631d4c21514f5362e86beedc619ae53c9a0ea842e7635786b69b324d5"
+      url "https://rtx.jdx.dev/v2023.12.23/rtx-v2023.12.23-macos-x64.tar.xz"
+      sha256 "a5c2bd456ecb9d60128ade293c8af7427551b158afb762b4399399a768445b76"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.jdx.dev/v2023.12.22/rtx-v2023.12.22-macos-arm64.tar.xz"
-      sha256 "fa8d9f8a02708e1b3d3af00bfc5879822226671806c3beff62bcd4d11795fb19"
+      url "https://rtx.jdx.dev/v2023.12.23/rtx-v2023.12.23-macos-arm64.tar.xz"
+      sha256 "905e1ca1bf238dadd1e0da514f1c38302b6aa375cdc268cd0e27fa29d3ef6a8e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.jdx.dev/v2023.12.22/rtx-v2023.12.22-linux-arm64.tar.xz"
-      sha256 "a32c8a3f11fda88653e46eff7bc3f566397c78e47ed55acc978e326fe1c51e48"
+      url "https://rtx.jdx.dev/v2023.12.23/rtx-v2023.12.23-linux-arm64.tar.xz"
+      sha256 "10f3edddea02012963f51b9904928cb912ecdc5e448623005693c0bbf16e250d"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.jdx.dev/v2023.12.22/rtx-v2023.12.22-linux-x64.tar.xz"
-      sha256 "e78d8c6d652c3a3ecda876c3e3dfd110621221a3aadb0fdd5ca389e932a658c4"
+      url "https://rtx.jdx.dev/v2023.12.23/rtx-v2023.12.23-linux-x64.tar.xz"
+      sha256 "3b2b3cf0c1fb397539e987269130af5afe0136ed84942966d01c50e8bc245d12"
     end
   end
 
   def install
     bin.install "bin/rtx"
     man1.install "man/man1/rtx.1"
+    share.install "share/fish"
     generate_completions_from_executable(bin / "rtx", "completion")
     lib.mkpath
     touch lib / ".disable-self-update"
