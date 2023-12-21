@@ -4,27 +4,27 @@ class Rtx < Formula
   desc "Multi-language runtime manager"
   homepage "https://github.com/jdx/rtx"
   license "MIT"
-  version "2023.12.33"
+  version "2023.12.34"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://rtx.jdx.dev/v2023.12.33/rtx-v2023.12.33-macos-x64.tar.xz"
-      sha256 "2c57edc27e587abe1b8b2b3796b77fd5192782a4b4ace45f59e0baba6a470c4c"
+      url "https://rtx.jdx.dev/v2023.12.34/rtx-v2023.12.34-macos-x64.tar.xz"
+      sha256 "4fe45c7b9b29b93c63ca9ae468b9a3c98065719423fff26a23a84e9bc529d7f2"
     end
     if Hardware::CPU.arm?
-      url "https://rtx.jdx.dev/v2023.12.33/rtx-v2023.12.33-macos-arm64.tar.xz"
-      sha256 "7871a740026e5dcdd0bdb3fcad577a4481f0e0af5e12e257e0aa0b809ffb6f03"
+      url "https://rtx.jdx.dev/v2023.12.34/rtx-v2023.12.34-macos-arm64.tar.xz"
+      sha256 "8ffbbe8d2e5f4a7458dd2be8a182434e95bbdadbb27edaa61d497ee15d7d78bb"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://rtx.jdx.dev/v2023.12.33/rtx-v2023.12.33-linux-arm64.tar.xz"
-      sha256 "c5152e8d04eed338d9b96a1251c03926547f2d547513cec2becaa40a6f05c765"
+      url "https://rtx.jdx.dev/v2023.12.34/rtx-v2023.12.34-linux-arm64.tar.xz"
+      sha256 "3533eef4d953faccc71b6d1362f53ae00b98397fc3767e7a2d4255c27d804002"
     end
     if Hardware::CPU.intel?
-      url "https://rtx.jdx.dev/v2023.12.33/rtx-v2023.12.33-linux-x64.tar.xz"
-      sha256 "cb65bff188b53d5239e015ee9de5aee02a809331bc756f0059e891b982e6fd26"
+      url "https://rtx.jdx.dev/v2023.12.34/rtx-v2023.12.34-linux-x64.tar.xz"
+      sha256 "916d1c560d58a82bcd01b66a8da94e2b9f007e281fdb4a72e4fe4a2d8e4a04f5"
     end
   end
 
