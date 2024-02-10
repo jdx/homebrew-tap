@@ -1,7 +1,7 @@
-## rtx
+## usage
 
-Install [`rtx`](https://github.com/jdxcode/rtx) with:
+Install [`usage`](https://github.com/jdx/usage) with:
 
 ```
-brew install jdxcode/tap/rtx
+brew install jdx/tap/usage
 ```
