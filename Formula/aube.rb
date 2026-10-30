@@ -1,8 +1,8 @@
 class Aube < Formula
   desc "Fast Node.js package manager that drops into existing projects"
   homepage "https://aube.sh"
-  url "https://github.com/aubepkg/aube/archive/refs/tags/v2.2.9.tar.gz"
-  sha256 "bb33990b2a11b718303185abc3665c3d1c6ad65c91bab0a91db37ecdecd9ad7f"
+  url "https://github.com/aubepkg/aube/archive/refs/tags/v2.8.2.tar.gz"
+  sha256 "17d1bccfca0d6c7ac5126b11ce685c5359380dc8e522c5d3e943dc1f92ea8fce"
   license "MIT"
 
   depends_on "rust" => :build
